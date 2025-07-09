@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Student</title>
+  </head>
+  <body>
+    <h2>Edit Student</h2>
+    <form method="POST">
+      <label>Name:</label><br />
+      <input type="text" name="name" value="{{ student.name }}" /><br />
+      <label>Email:</label><br />
+      <input
+        type="email"
+        name="email"
+        value="{{ student.email }}"
+      /><br /><br />
+      <button type="submit">Update</button>
+    </form>
+    <br />
+    <a href="/">Back to Student List</a>
+  </body>
+</html>

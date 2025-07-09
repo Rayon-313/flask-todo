@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS DEMO</title>
+</head>
+<body>
+    <h2>Comment garnus</h2>
+    <form method="POST">
+        <textarea
+            name="comment"
+            rows="3"
+            cols="40"
+            placeholder="Kei ramro lekham..."
+        ></textarea
+        ><br />
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>All comments</h3>
+    {% for c in comments %}
+    <p>{{ c | safe }}</p>
+    <!--<p>{{ c  }}</p>-->
+    {% endfor %}
+</body>
+</html>

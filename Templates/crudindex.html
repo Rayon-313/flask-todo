@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student List</title>
+  </head>
+  <body>
+    <a href="/add">Add New Student</a><br />
+    <h2>All Students</h2>
+    <ul>
+      {% for student in students %}
+      <li>
+        {{ student.name }} - {{ student.email }} [<a
+          href="/edit/{{ student.id }}"
+          >Edit</a
+        >] [<a
+          href="/delete/{{ student.id }}"
+          onclick="return confirm('Are you sure?');"
+          >Delete</a
+        >]
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
